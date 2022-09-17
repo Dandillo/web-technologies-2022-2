@@ -3,3 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+header {
+    height: 100px;
+    background-color: black;
+    width: 100%;
+}
+
+.menu-elements {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding: 30px;
+}
+.link {
+    text-decoration: none;
+    font-size: 2em;
+    color: white;
+}
+.link:hover {
+    transition: ease-in-out .3s;
+    color: #8cb7a4;
+}
+.menu-element:hover {
+    cursor: pointer;
+
+}
