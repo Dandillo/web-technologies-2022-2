@@ -21,3 +21,10 @@
          url("/static/fonts/Inter-Regular.woff2") format("woff");
     font-weight: 400;
 }
+@font-face {
+    font-family: "Inter";
+    src: local('Inter'), local('inter-italic'), local('Inter Italic'),
+    url("/static/fonts/inter-italic.ttf") format("truetype"),
+    url("/static/fonts/inter-italic.woff2") format("woff");
+    font-weight: 200;
+}
