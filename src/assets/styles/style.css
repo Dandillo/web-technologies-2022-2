@@ -28,8 +28,7 @@ main {
 }
 
 header {
-    height: 100px;
-    background-color: black;
+    background-color: #568d56;
     width: 100%;
 }
 
@@ -50,9 +49,18 @@ main {
 .menu-elements {
     list-style-type: none;
     display: flex;
-    justify-content: center;
-    gap: 45px;
-    padding: 30px;
+    column-gap: 20px;
+    padding: 15px;
+}
+.menu-element {
+    border-right: 5px solid white;
+    border-radius: 25px;
+    -webkit-box-shadow: 5px 0px 0px 0px rgba(34, 60, 80, 0.4);
+    -moz-box-shadow: 5px 0px 0px 0px rgba(34, 60, 80, 0.4);
+    box-shadow: 5px 0px 0px 0px rgba(34, 60, 80, 0.4);
+    display: block;
+    padding-right: 10px;
+    transition: ease-in-out .2s;
 }
 
 .link {
@@ -80,7 +88,10 @@ main {
 
 .menu-element:hover {
     cursor: pointer;
-
+    -webkit-box-shadow: 5px 0px 0px 0px rgba(140, 183, 164, 0.2);
+    -moz-box-shadow: 5px 0px 0px 0px rgba(140, 183, 164, 0.2);
+    box-shadow: 5px 0px 0px 0px rgba(140, 183, 164, 0.2);
+    border-color: rgba(0, 0, 0, 0.15);
 }
 
 .contacts-nested {
@@ -162,5 +173,5 @@ textarea {
 footer {
     color: white;
     padding: 30px;
-    background-color: black;
+    background-color: #63a472;
 }
