@@ -12,6 +12,7 @@
 <section class="header-section">
     <div class="wrapper">
         <header class="page__header">
+            <img class='burger-menu' src="./assets/icons/burger.svg" alt="">
             <h3 class="header-title">IT WEBSITE</h3>
             <nav class="nav__menu">
                 <li class="menu__element"><a class='link menu-link' href="">Services</a></li>
@@ -20,16 +21,14 @@
                 <li class="menu__element"><a class='link menu-link' href="">FAQ</a></li>
                 <li class="menu__element"><a class='link menu-link' href="">Contacts</a></li>
             </nav>
-            <div class="header-contacts">
-                <div class="phones-container">
-                    <img class='contacts-icon' src="./assets/icons/phone.svg" alt="phone icon">
-                    <p class="contact-text"><a class="link" href="tel:+7 (111) 111 11 11">+7 (111) 111 11 11</a></p>
-                    <p class="contact-text"><a class="link" href="tel:+7 (111) 111 11 11">+7 (111) 111 11 11</a></p>
-                </div>
-                <div class="mail-container">
-                    <img class='contacts-icon' src="./assets/icons/mail.svg" alt="mail icon">
-                    <p class="contact-text"><a class="link" href="mailto:itcompany@mail.com">itcompany@mail.com</a></p>
-                </div>
+            <div class="phones-container">
+                <img class='contacts-icon' src="./assets/icons/phone.svg" alt="phone icon">
+                <p class="contact-text"><a class="link" href="tel:+7 (111) 111 11 11">+7 (111) 111 11 11</a></p>
+                <p class="contact-text"><a class="link" href="tel:+7 (111) 111 11 11">+7 (111) 111 11 11</a></p>
+            </div>
+            <div class="mail-container">
+                <img class='contacts-icon' src="./assets/icons/mail.svg" alt="mail icon">
+                <p class="contact-text"><a class="link" href="mailto:itcompany@mail.com">itcompany@mail.com</a></p>
             </div>
         </header>
     </div>
@@ -39,15 +38,17 @@
         <div class="wrapper">
             <div class="intro-content">
                 <div class="intro-content__text">
-                    <h1 class="intro-heading">Development of <span class="blue">mobile<br>applications</span> and <span
+                    <h2 class="intro-heading section-heading">Development of <span
+                            class="blue">mobile<br>applications</span> and <span
                             class="blue">web
-                services</span> of<br>any complexity</h1>
+                services</span> of any complexity</h2>
                     <p class="paragraph intro-paragraph">We create mobile applications for iOS, Android that transfer
                         your
-                        business to mobile<br>applications of your customers' devices</p>
+                        business to mobile applications of your customers' devices</p>
                 </div>
                 <div class="form-container">
-                    <h3 class="form-heading">Leave your contacts and we will call you back<br>within 30 minutes</h3>
+                    <h3 class="form-heading">Leave your contacts and we will call you back
+                        within&nbsp;30&nbsp;minutes</h3>
                     <form action="#" class="contact-form">
                         <div class="form-element">
                             <label for="phone-num">Phone number</label>
@@ -57,29 +58,57 @@
                             <label for="fullname">Full name</label>
                             <input type="text" name="full-name" id="fullname" placeholder="Your full name">
                         </div>
-                        <input type="submit" value="Get consultation">
+                        <input type="submit" value="Get consultation" class="submit-form-btn">
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    <!--<section class="dev-section">-->
-    <!--    <div class="wrapper">-->
-    <!--        <div class="development-block">-->
-    <!--            <div class="development-block__text"></div>-->
-    <!--            <ul class="development-block__links">-->
-    <!--                <li class="link"></li>-->
-    <!--                <li class="link"></li>-->
-    <!--                <li class="link"></li>-->
-    <!--                <li class="link"></li>-->
-    <!--                <li class="link"></li>-->
-    <!--                <li class="link"></li>-->
-    <!--                <li class="link"></li>-->
-    <!--            </ul>-->
-    <!--        </div>-->
-    <!--    </div>-->
+    <section class="dev-section">
+        <div class="wrapper">
+            <div class="development-content">
+                <div class="development-content__text">
+                    <h2 class="section-heading">Full development cycle</h2>
+                    <p class="paragraph">We use proven technologies</p>
+                    <div class="technology__description">
+                        <h4 class="paragraph technology-heading technology-heading__bold">Web</h4>
+                        <p class="paragraph technology-paragraph">PHP <span class="blue">/</span> Javascript <span
+                                class="blue">/</span> Node.JS <span class="blue">/</span> Web Socket <span class="blue">/</span>
+                            Socket.io <span class="blue">/</span> Vue.js <span class="blue">/</span> Nuxt <span
+                                    class="blue">/</span> MySQL <span class="blue">/</span> Laravel <span
+                                    class="blue">/</span> GO lang <span class="blue">/</span> django <span class="blue">/</span>
+                            Python</p>
+                    </div>
+                    <div class="technology__description">
+                        <h4 class="paragraph technology-heading technology-heading__bold">Mobile</h4>
+                        <p class="paragraph technology-paragraph">Swift <span
+                                class="blue">/</span> Kotlin <span
+                                class="blue">/</span> Alamofire <span
+                                class="blue">/</span> Firebase <span
+                                class="blue">/</span> CoreData <span
+                                class="blue">/</span>
+                            Room <span
+                                    class="blue">/</span> Realm <span
+                                    class="blue">/</span> Coroutine <span
+                                    class="blue">/</span> RxJava <span
+                                    class="blue">/</span> RxSwift <span
+                                    class="blue">/</span> Unit Test <span
+                                    class="blue">/</span> Navigation</p>
+                    </div>
+                </div>
+                <ul class="development-content__links">
+                    <li ><a href="" title="iOS  development">iOS  development</a></li>
+                    <li ><a href="" title="Android development">Android development</a></li>
+                    <li ><a href="" title="Web development">Web development</a></li>
+                    <li ><a href="" title="UI/UX design">UI/UX design</a></li>
+                    <li><a href="" title="Testing">Testing</a></li>
+                    <li><a href="" title="Launch">Launch</a></li>
+                    <li><a href="" title="IT consulting">IT consulting</a></li>
+                </ul>
+            </div>
+        </div>
 
-    <!--</section>-->
+    </section>
     <!--<hr>-->
     <!--<section class="stages-section">-->
     <!--    <div class="wrapper">-->
