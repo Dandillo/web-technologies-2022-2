@@ -242,7 +242,10 @@ text-decoration: none;
     row-gap: 40px;
 }
 .footer-section {
-    padding-right: 108px;
+}
+.footer-section .wrapper {
+    max-width: 100%;
+    padding: 0 6em;
 }
 .page-footer__heading {
     color: white;
@@ -299,7 +302,7 @@ text-decoration: none;
     margin: 0 auto;
     vertical-align: center;
 }
-@media screen and (min-width:768px) and (max-width:1439px)  {
+@media screen and (max-width:1439px)  {
     .page__header {
         top: 20px;
         right: 0;
@@ -333,7 +336,7 @@ text-decoration: none;
     }
     .intro-section {
         background-image: url("/src/assets/img/intro background_tab.png") ;
-        background-position: right -4px center;
+        background-position: right -80px center;
         height: 762px;
     }
     .submit-form-btn {
@@ -368,9 +371,68 @@ text-decoration: none;
     }
     .footer-section {
         padding: 0;
+        background-color: #F5F5F5;
     }
     .footer-section .wrapper{
+        padding: 0 10px;
+
+    }
+    .section-heading {
+        font-size: 28px;
+    }
+    .development-content {
+        column-gap: 0;
+        justify-content: space-between;
+    }
+    .technology-paragraph {
+        font-size: 14px;
+    }
+    .technology__description {
+        width: 277px;
+    }
+    .development-content__links {
+        padding-right: 100px;
+    }
+}
+@media screen and (max-width:767px)  {
+    .mail-container {
+        display: none;
+    }
+    .page__header {
+        justify-content: flex-start;
+    }
+    .header-title {
+        justify-self: center;
+    }
+    .intro-section {
+        background-image: url("/src/assets/img/intro background_tab.png") ;
+        background-position: bottom -80px right -100px;
+        height: 1193px;
+    }
+    .intro-paragraph{
         padding: 0;
+    }
+    .intro-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 1193px;
+        padding-bottom: 33px;
+
+    }
+    .intro-content__text {
+        padding-top: 120px;
+    }
+    .form-container{
+        margin-top: auto;
+
+    }
+    .development-content {
+        flex-direction: column;
+        row-gap: 32px;
+    }
+    .development-content__text {
+        row-gap: inherit;
     }
 }
 /*@media screen and (min-width:425px) and (max-width:768px) {*/
