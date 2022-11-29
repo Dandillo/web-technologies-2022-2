@@ -6,7 +6,9 @@
 $blue:#2D66EE
 $darkgray:#101828
 $gray:#1D2939
+$lightgray:#667085
 $SFPro:'SF Pro Display'
+$Inter:'Inter'
 
 html
   height: 100%
@@ -26,8 +28,10 @@ body
   margin: 0 auto
   width: 100%
   max-width: 1440px
-  padding-left: 108px
-
+  padding: 0 108px
+.section-content
+  display: flex
+  flex-direction: column
 .page__header
   top: 24px
   background-color: white
@@ -39,6 +43,7 @@ body
   justify-content: space-between
   align-items: center
   width: 1124px
+  z-index: 999
 
 .header-title
   font-size: 20px
@@ -75,7 +80,7 @@ body
   height: 1400px
   z-index: -1
   display: flex
-  left: 45%
+  left: 55%
   top: -79px
 
   /*background-image: url("/src/assets/img/intro background.png") ;
@@ -95,7 +100,7 @@ body
   animation: moveBack 17s infinite linear
   position: relative
   background-size: 100%
-
+  overflow: hidden
 @keyframes move
   0%
     transform: translateY(-2000px)
@@ -161,7 +166,6 @@ body
   column-gap: 13px
 
 .link
-  text-decoration: none
   text-decoration: none
 
 .intro-content__text
@@ -286,6 +290,7 @@ body
   column-gap: 32px
   flex-wrap: wrap
   align-items: center
+  justify-content: space-between
 
 .projects-portfolio p
   width: 600px
@@ -331,10 +336,84 @@ body
   flex-basis: 100%
   height: 0
 .tabs button
-  margin-left: calc(10% - 32px)
-.stages-section
-  background-color: #F2F4F7
+  margin-left: calc(10% + 55px)
+.tab-content p
+  padding: 0
+.tab-content
+  width: 100%
+.tab-content .section-content
+  display: flex
+  flex-direction: column
+  row-gap: 40px
+.project-info
+  display: flex
+  column-gap: 34px
+.project-location,.project-specialization
+  column-gap: 12px
+  display: inline-flex
+  align-items: center
+.project-location:before,.project-specialization:before
+  width: 20px
+  height: 20px
 
+.project-location:before
+  content: url("../../../assets/icons/location.svg")
+
+.project-specialization:before
+  content: url("../../../assets/icons/specialization.svg")
+
+.tab-wrapper
+  display: flex
+  justify-content: space-between
+.tab-background
+  object-fit: contain
+  z-index: -1
+  height: auto
+.content-paragraph
+  width: 500px
+.download_sources
+  display: flex
+  column-gap: 17px
+.download_sources a
+  display: block
+.amount
+  font-family: $Inter
+  font-style: normal
+  font-weight: 700
+  font-size: 24px
+  line-height: 144%
+  letter-spacing: 0.326451px
+  color: $darkgray
+  display: inline-block
+.caption
+  color: $lightgray
+  font-weight: 400
+  font-size: 13px
+  line-height: 16px
+  width: min-content
+.project-stat
+  width: 100%
+  display: flex
+  column-gap: 50px
+.project-stat p
+  width: auto
+.header-section a
+  font-weight: 500
+.stages-section
+  background-color: #FFFFFF
+.development-stages
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  width: 100%
+  justify-content: space-between
+.development-stage
+  background: #FFFFFF
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 2px 24px rgba(0, 0, 0, 0.08)
+  border-radius: 12px
+  width: 392px
+  height: 192px
+  padding: 24px
 .footer-content
   background: $darkgray
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 2px 24px rgba(0, 0, 0, 0.08)
@@ -347,7 +426,7 @@ body
 
 .footer-section .wrapper
   max-width: 100%
-  padding: 0 6em
+
 
 .page-footer__heading
   color: white
@@ -396,6 +475,43 @@ body
 .footer-conclusion
   margin: 0 auto
   vertical-align: center
+.discuss-section
+  background: rgba(45, 102, 339, 1) url("../../../assets/img/Noise.png")
+  height: 390px
+.discuss-section .wrapper
+  background: url("../../../assets/img/forms-bg.png") no-repeat center
+  height: 390px
+.section-form p, .section-form .section-heading
+  color: #FFFFFF
+
+.discuss-form
+  display: grid
+  grid-auto-flow: row
+  grid-template-columns: repeat(2,1fr)
+
+#discuss-submit
+  justify-self: right
+  grid-column: span 2
+  margin-top: 35px
+.discuss-section__text
+  width: 600px
+.discuss-section__text .paragraph
+  width: 400px
+  font-style: normal
+  font-weight: 500
+  font-size: 15px
+  line-height: 20px
+.discuss-section__content
+  width: 100%
+  height: 100%
+  justify-content: space-between
+  flex-direction: row
+  align-items: center
+  display: flex
+  flex-wrap: wrap
+  padding-bottom: 32px
+.discuss-section__text .section-heading
+  padding-bottom: 24px
 
 @media screen and (max-width: 768px)
   .page__header
@@ -423,7 +539,7 @@ body
 
   .wrapper
     max-width: 768px
-    padding-left: 32px
+    padding: 0 32px
 
   .moving-background
     width: 580px
@@ -464,8 +580,6 @@ body
     padding: 0
     background-color: #F5F5F5
 
-    .wrapper
-      padding: 0 10px
 
   .section-heading
     font-size: 28px
@@ -486,24 +600,54 @@ body
     padding-top: 45px
   .industries-list
     grid-template-columns: repeat(2, 380px)
+  .tab-background
+    position: absolute
+    width: 370px
+    bottom: 35px
+    right: -10px
+  .tabs
+    column-gap: 26px
+    row-gap: 16px
+    position: relative
+    padding-top: 42px
+  .tabs label
+    font-size: 14px
+  .break
+    display: none
+  .tabs button
+    margin-left: auto
+    position: absolute
+    top: 120px
+    right: 22px
+  .paragraph
+    font-size: 14px
+  .amount,.active-users
+    font-size: 20px
+  .project-specialization,.project-location
+    font-size: 14px
+  .projects-portfolio .paragraph,.projects-portfolio .content-paragraph
+    width: 460px
+  .discuss-section__content
+    flex-direction: column
+    align-items: flex-start
+
 @media screen and (max-width: 425px)
+  .wrapper
+    max-width: 425px
+    padding: 0 10px
   .mail-container
     display: none
   .section-content
     padding-top: 32px
   .page__header
     justify-content: flex-start
-
   .header-title
     margin: 0 auto
-
   .moving-background
-
     left: 25%
     top: 40%
   .moving-background
     width: 580px
-
   .right-column
     width: 275px
     background-size: 167px
@@ -514,24 +658,59 @@ body
     animation: none
   .intro-paragraph
     padding: 0
-
   .intro-content
     display: flex
     flex-direction: column
     align-items: flex-end
     height: 1193px
     padding-bottom: 33px
-
   .intro-content__text
     padding-top: 120px
-
   .form-container
     margin-top: auto
-
   .development-content
+    display: flex
     flex-direction: column
     row-gap: 32px
-
   .development-content__text
     row-gap: inherit
+  .projects-portfolio .paragraph,.projects-portfolio .content-paragraph
+    width: 340px
+  .tab-wrapper
+    flex-direction: column
+  .tab-background
+    position: static
+    width: 370px
+    order: -1
+  .tabs button
+    position: static
+    order: 6
+    margin: 0 auto
+    padding: 11px 50px
+  .tabs
+    padding-top: 32px
+  .footer-contacts
+    flex-wrap: wrap
+    row-gap: 15px
+  .industries-list
+    grid-template-columns: repeat(2, 1fr)
+  .discuss-section__content
+    flex-wrap: nowrap
+  .discuss-section,.discuss-section .wrapper
+    height: auto
+  .discuss-section__content .discuss-form
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    align-items: center
+    justify-content: flex-start
+  .discuss-section__content .form-container
+    width: 100%
+    margin-top: 128px
+    padding: 36px 20px
+  .discuss-form .form-element
+    width: 100%
+    padding-bottom: 40px
+  #discuss-submit
+    margin-top: 0
 
