@@ -75,12 +75,13 @@ body
   height: 1400px
   z-index: -1
   display: flex
-  left: 50%
+  left: 45%
   top: -79px
 
   /*background-image: url("/src/assets/img/intro background.png") ;
   transform: rotate(-12deg)
   overflow: hidden
+
 
 .left-column
   content: ''
@@ -142,6 +143,7 @@ body
   color: $darkgray
 
 .paragraph
+  font-size: 17px
   font-family: $SFPro
   font-weight: 500
   color: $darkgray
@@ -195,14 +197,17 @@ body
   background-color: white
 
 .development-content
-  display: flex
-  column-gap: 232px
+  display: grid
+  grid-auto-flow: column
+
   padding-top: 32px
   align-content: baseline
   padding-bottom: 80px
 
+
 .development-content__links
   list-style-type: none
+
 
   li
     a
@@ -242,19 +247,93 @@ body
 .technology__description
   width: 465px
 
-.technology-paragraph
+.thin-paragraph
   font-size: 17px
   font-weight: 400
   color: $gray
   line-height: 22px
+.industries-list
+  padding-top: 28px
+  display: grid
+  grid-auto-flow: row
+  grid-template-columns: repeat(3,0.31fr)
+  justify-items: left
+  row-gap: 15px
+
+.industry-element
+  display: flex
+  align-items: center
+  column-gap: 16px
 
 .development-content__text
   display: flex
   flex-direction: column
   justify-content: space-between
 
+.section-content
+  padding-top: 40px
+
+.industry-icon
+  width: 44px
+  height: 44px
+.industry-element p
+  display: inline-block
+
+.tabs
+  padding-top: 70px
+  list-style-type: none
+  display: flex
+  column-gap: 32px
+  flex-wrap: wrap
+  align-items: center
+
+.projects-portfolio p
+  width: 600px
+  padding-top: 24px
 .technology__description h4
   padding-bottom: 12px
+
+
+
+#tab-1:checked~#i-teka,
+#tab-2:checked~#Dauletten,
+#tab-3:checked~#guru,
+#tab-4:checked~#santo,
+#tab-5:checked~#home_bank,
+#tab-6:checked~#bi_partners,
+#tab-7:checked~#europharma
+  display: block
+.tabs div[id]
+  display: none
+.tabs input[type=radio]
+  display: none
+.tabs label
+  font-size: 17px
+  display: inline-block
+  padding: 0
+.tabs label:hover
+  cursor: pointer
+  font-weight: bolder
+  box-shadow: inset 0 -2px 0 0 $blue
+.tabs label:before
+  height: 0
+  display: block
+  overflow: hidden
+  visibility: hidden
+  content: attr(title)
+  font-weight: bold
+
+.tabs [id^="tab"]:checked + label
+  cursor: default
+  font-weight: bolder
+  box-shadow: inset 0 -2px 0 0 $blue
+.break
+  flex-basis: 100%
+  height: 0
+.tabs button
+  margin-left: calc(10% - 32px)
+.stages-section
+  background-color: #F2F4F7
 
 .footer-content
   background: $darkgray
@@ -403,11 +482,15 @@ body
 
   .development-content__links
     padding-right: 100px
-
+  .section-content
+    padding-top: 45px
+  .industries-list
+    grid-template-columns: repeat(2, 380px)
 @media screen and (max-width: 425px)
   .mail-container
     display: none
-
+  .section-content
+    padding-top: 32px
   .page__header
     justify-content: flex-start
 
