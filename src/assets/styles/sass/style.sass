@@ -9,7 +9,7 @@ $gray:#1D2939
 $lightgray:#667085
 $SFPro:'SF Pro Display'
 $Inter:'Inter'
-
+$gray300:#D0D5DD
 html
   height: 100%
   display: flex
@@ -37,14 +37,17 @@ body
   background-color: white
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08)
   border-radius: 12px
-  display: flex
   position: fixed
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  max-width: 1124px
+  z-index: 999
+.header-content
+  display: flex
   padding: 19px 24px
   justify-content: space-between
   align-items: center
-  width: 1124px
-  z-index: 999
-
 .header-title
   font-size: 20px
   font-weight: 700
@@ -86,12 +89,12 @@ body
   /*background-image: url("/src/assets/img/intro background.png") ;
   transform: rotate(-12deg)
   overflow: hidden
-
+  opacity: .99
 
 .left-column
   content: ''
   margin: 0
-
+  opacity: .99
   width: 550px
   height: 3960px
   background-image: url("/src/assets/img/column-left.webp")
@@ -120,14 +123,14 @@ body
   position: relative
   background-repeat: repeat-y
   overflow: hidden
-
+  opacity: .99
 
 @keyframes moveBack
   0%
     transform: translateY(0px)
 
   100%
-    transform: translateY(-2000px)
+    transform: translateY(-1000px)
 
 .burger-menu
   display: none
@@ -199,7 +202,8 @@ body
 
 .dev-section
   background-color: white
-
+.indusrties-section
+  background-color: #F2F4F7
 .development-content
   display: grid
   grid-auto-flow: column
@@ -403,17 +407,53 @@ body
   background-color: #FFFFFF
 .development-stages
   display: flex
-  align-items: center
+  justify-content: center
   flex-wrap: wrap
+  flex-direction: column
+  height: 700px
   width: 100%
-  justify-content: space-between
+  align-content: space-between
+  padding-top: 25px
+  padding-bottom: 80px
+  row-gap: 32px
 .development-stage
   background: #FFFFFF
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 2px 24px rgba(0, 0, 0, 0.08)
   border-radius: 12px
-  width: 392px
-  height: 192px
+  width: 33.4%
   padding: 24px
+  height: 172px
+.development-stage .paragraph
+  font-size: 15px
+
+.development-stage:nth-child(1)
+  background: url("../../../assets/icons/1.svg") no-repeat right top
+
+.development-stage:nth-child(2)
+  background: url("../../../assets/icons/2.svg") no-repeat right top
+
+.development-stage:nth-child(3)
+  background: url("../../../assets/icons/3.svg") no-repeat right top
+
+.development-stage:nth-child(4)
+  background: url("../../../assets/icons/4.svg") no-repeat right top
+
+.development-stage:nth-child(5)
+  background: url("../../../assets/icons/5.svg") no-repeat right top
+
+.development-stage:nth-child(6)
+  background: url("../../../assets/icons/6.svg") no-repeat right top
+
+.stage-heading
+  display: flex
+  align-items: center
+  column-gap: 25px
+  padding-bottom: 25px
+.stage-heading img
+  display: block
+  width: 45px
+  height: 45px
+
 .footer-content
   background: $darkgray
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 2px 24px rgba(0, 0, 0, 0.08)
@@ -476,11 +516,15 @@ body
   margin: 0 auto
   vertical-align: center
 .discuss-section
-  background: rgba(45, 102, 339, 1) url("../../../assets/img/Noise.png")
   height: 390px
 .discuss-section .wrapper
   background: url("../../../assets/img/forms-bg.png") no-repeat center
   height: 390px
+.form-section
+  background: rgba(45, 102, 339, 1) url("../../../assets/img/Noise.png")
+.form-section .wrapper
+  background: url("../../../assets/img/forms-bg.png") no-repeat center
+
 .section-form p, .section-form .section-heading
   color: #FFFFFF
 
@@ -512,8 +556,151 @@ body
   padding-bottom: 32px
 .discuss-section__text .section-heading
   padding-bottom: 24px
+.team-info
+  display: flex
+  justify-content: space-between
+.team-info .amount
+  font-size: 48px
+.team-info .caption
+  font-size: 15px
+  width: 100%
+.team-content
+  width: 100%
+  padding-top: 80px
+  padding-bottom: 100px
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: repeat(2,1fr)
+
+.team-content video
+  width: 600px
+  box-shadow: 0px 42px 33px -27px rgba(34, 60, 80, 0.6)
+  height: min-content
+  object-fit: contain
+
+.team-content__text
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  width: 600px
+  height: 400px
+  row-gap: 32px
+  align-content: space-between
+  column-gap: 3%
+.book-form
+  display: flex
+  flex-wrap: wrap
+  width: 600px
+  row-gap: 32px
+.form-row
+  width: 100%
+  display: flex
+  justify-content: space-between
+  column-gap: 24px
+.book-form input[name]
+  width: 100%
+.book-form .form-element
+  width: 100%
+  padding-right: 0
+.book-form .form-element:nth-child(3)
+  width: 100%
+#book-submit
+  margin-left: auto
+  order: 6
+.book-section .wrapper
+  display: flex
+  height: 100%
+  align-items: center
+  justify-content: space-between
+  justify-items: center
+.book-section__heading
+  grid-area: heading
+
+.book-section__content
+  display: grid
+  grid-template-columns: repeat(2,1fr)
+  row-gap: 40px
+  padding-bottom: 80px
+  grid-template-areas: 'heading picture' 'form picture'
+  justify-content: space-between
+  align-items: center
+.book-section .form-container
+  grid-area: form
+.book-section__picture
+  grid-area: picture
+  display: block
+  height: 400px
+  padding-right: 135px
+  justify-self: right
+.faq-section__content
+  padding-top: 40px
+  display: grid
+  grid-auto-flow: column
+  justify-content: space-between
+.faq-details
+  position: relative
+.faq-details__element::-webkit-details-marker
+  display: none
+.faq-details__element
+  display: flex
+  align-items: center
+  transition: transform .5s
+
+.faq-details__element::after
+  display: block
+  transition: transform .5s
+  width: 60px
+  content: ''
+  height: 60px
+  background: url("../../../assets/icons/plus_faq.svg")
+  background-size: 100%
+  position: absolute
+  right: 0
+.faq-details__element,.faq-details
+  width: 600px
+  font-family: $SFPro
+  font-style: normal
+  font-weight: 600
+  font-size: 20px
+  line-height: 24px
+  letter-spacing: 0.38px
+  color: $darkgray
+.faq-details__element
+  padding: 46px 0
+
+.faq-details__element:hover
+  cursor: pointer
+.faq-details[open] .faq-details__element::after
+  transform: rotate(45deg)
+  //background: url("../../../assets/icons/cross.svg") no-repeat center center
+  filter: grayscale(100%)
+
+.faq-details__body
+  font-size: 16px
+.faq-details__body p
+  padding-bottom: 25px
+.faq-details:nth-child(2)
+  grid-column: 2
+  grid-row: 2
+.faq-details:nth-child(4)
+  grid-column: 2/2
+
+.faq-details:nth-child(2n+1)
+  border-top: 0.5px solid $gray300
+  border-bottom: 0.5px solid $gray300
+.faq-details:nth-child(2n)
+  border-bottom: 0.5px solid $gray300
+.faq-section__column
+  margin: -0.5px 0
+.faq-section__content
+  margin-bottom: 40px
+.footer-section .wrapper
+  margin-bottom: 40px
 
 @media screen and (max-width: 768px)
+
+  .footer-section .wrapper
+    margin-bottom: 0
   .page__header
     top: 20px
     right: 0
@@ -630,6 +817,47 @@ body
   .discuss-section__content
     flex-direction: column
     align-items: flex-start
+  .development-stages
+    flex-wrap: nowrap
+    height: auto
+    padding-bottom: 32px
+  .development-stage
+    width: 100%
+  .team-content
+    padding-top: 28px
+    padding-bottom: 52px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex-wrap: nowrap
+  .team-content__text
+    width: min-content
+    display: flex
+    flex-wrap: nowrap
+    height: auto
+  .team-content__text video
+    order: -1
+  .team-content__text .section-heading
+    order: -3
+  .team-content__text .paragraph:nth-child(2)
+    order: -2
+  .book-form
+    width: 340px
+  .book-section__picture
+    padding-top: 90px
+    padding-right: 50px
+  .form-row
+    flex-direction: column
+    row-gap: 24px
+  #book-submit
+    margin-left: 0
+    margin-right: auto
+  .faq-section__content
+    grid-auto-flow: row
+    margin: 0 auto 55px
+
+.faq-section__column:first-child
+    order: 2
 
 @media screen and (max-width: 425px)
   .wrapper
@@ -713,4 +941,34 @@ body
     padding-bottom: 40px
   #discuss-submit
     margin-top: 0
+  .team-content__text
+    width: inherit
+  .team-content__text .amount
+    font-size: 28px
+  .team-content__text video
+    width: inherit
+  .book-section__picture
+    padding: 0
+    height: 242px
+  .book-section .wrapper
+    flex-direction: column
+  .book-section__content
+    display: flex
+    flex-direction: column
+  .moving-background
+    display: none
+  .intro-section
+    background: url("../../../assets/img/intro background_tab.png") no-repeat bottom right
+    background-position-x: 0
+    background-position-y: 290px
+  .discuss-section__text
+    width: 100%
+  .faq-details__element, .faq-details
+    width: 400px
+    font-weight: 600
+    font-size: 20px
+    line-height: 26px
+    letter-spacing: 0.38px
+  .faq-details__element p
+    width: 270px
 

@@ -12,23 +12,28 @@
 <section class="header-section">
     <div class="wrapper">
         <header class="page__header">
-            <img class='burger-menu' src="./assets/icons/burger.svg" alt="">
-            <h3 class="header-title">IT WEBSITE</h3>
-            <nav class="nav__menu">
-                <li class="menu__element"><a class='link menu-link' href="">Services</a></li>
-                <li class="menu__element"><a class='link menu-link' href="">Media</a></li>
-                <li class="menu__element"><a class='link menu-link' href="">Cases</a></li>
-                <li class="menu__element"><a class='link menu-link' href="">FAQ</a></li>
-                <li class="menu__element"><a class='link menu-link' href="">Contacts</a></li>
-            </nav>
-            <div class="phones-container">
-                <img class='contacts-icon' src="./assets/icons/phone.svg" alt="phone icon">
-                <p class="contact-text"><a class="blue link" href="tel:+7 (111) 111 11 11">+7 (111) 111 11 11</a></p>
-                <p class="contact-text"><a class="blue link" href="tel:+7 (111) 111 11 11">+7 (111) 111 11 11</a></p>
-            </div>
-            <div class="mail-container">
-                <img class='contacts-icon' src="./assets/icons/mail.svg" alt="mail icon">
-                <p class="contact-text"><a class="blue link" href="mailto:itcompany@mail.com">itcompany@mail.com</a></p>
+            <div class="header-content">
+                <img class='burger-menu' src="./assets/icons/burger.svg" alt="">
+                <h3 class="header-title">IT WEBSITE</h3>
+                <nav class="nav__menu">
+                    <li class="menu__element"><a class='link menu-link' href="">Services</a></li>
+                    <li class="menu__element"><a class='link menu-link' href="">Media</a></li>
+                    <li class="menu__element"><a class='link menu-link' href="">Cases</a></li>
+                    <li class="menu__element"><a class='link menu-link' href="">FAQ</a></li>
+                    <li class="menu__element"><a class='link menu-link' href="">Contacts</a></li>
+                </nav>
+                <div class="phones-container">
+                    <img class='contacts-icon' src="./assets/icons/phone.svg" alt="phone icon">
+                    <p class="contact-text"><a class="blue link" href="tel:+7 (111) 111 11 11">+7 (111) 111 11 11</a>
+                    </p>
+                    <p class="contact-text"><a class="blue link" href="tel:+7 (111) 111 11 11">+7 (111) 111 11 11</a>
+                    </p>
+                </div>
+                <div class="mail-container">
+                    <img class='contacts-icon' src="./assets/icons/mail.svg" alt="mail icon">
+                    <p class="contact-text"><a class="blue link" href="mailto:itcompany@mail.com">itcompany@mail.com</a>
+                    </p>
+                </div>
             </div>
         </header>
     </div>
@@ -118,7 +123,7 @@
 
     </section>
 
-    <section class="stages-section">
+    <section class="indusrties-section">
         <div class="wrapper">
             <div class="projects-industries section-content">
                 <h2 class="section-heading">Developed more than <span class="blue">100</span> <br>projects in <span
@@ -291,7 +296,7 @@
             </div>
         </div>
     </section>
-    <section class="discuss-section">
+    <section class="discuss-section form-section">
         <div class="wrapper">
             <div class="section-content section-form discuss-section__content">
                 <div class="discuss-section__text">
@@ -302,12 +307,12 @@
                 <div class="form-container">
                     <form action="#" class="discuss-form">
                         <div class="form-element">
-                            <label for="phone-num">Best phone number</label>
+                            <label for="discuss-phone-num">Best phone number</label>
                             <input type="tel" name="phone-number" id="discuss-phone-num"
                                    placeholder="Your phone number">
                         </div>
                         <div class="form-element">
-                            <label for="fullname">Full name</label>
+                            <label for="discuss-fullname">Full name</label>
                             <input type="text" name="full-name" id="discuss-fullname" placeholder="Your full name">
                         </div>
                         <input type="submit" value="Discuss the project" id='discuss-submit' class="submit-form-btn">
@@ -317,80 +322,197 @@
 
         </div>
     </section>
-
-    <!--<hr>-->
     <section class="stages-section">
         <div class="wrapper">
             <div class="section-content">
                 <h2 class="section-heading">Application Development Stages</h2>
                 <div class="development-stages">
                     <div class="development-stage">
-                        <h4 class="paragraph technology-heading technology-heading__bold">Analysis</h4>
+                        <div class="stage-heading">
+                            <img src="/src/assets/icons/planing.svg" alt="">
+                            <h4 class="paragraph technology-heading technology-heading__bold">Analysis</h4></div>
+
                         <p class="paragraph thin-paragraph">We write technical specifications for development, taking
                             into account the business processes and technologies of the customer and the needs of
                             users.</p>
                     </div>
                     <div class="development-stage">
-                        <h4 class="paragraph technology-heading technology-heading__bold">Testing</h4>
-                        <p class="paragraph thin-paragraph">We carry out functional testing and do bug fixes. We adapt the application to different phone resolutions</p>
+                        <div class="stage-heading">
+                            <img src="/src/assets/icons/graphic-design.svg" alt="">
+                            <h4 class="paragraph technology-heading technology-heading__bold">Design</h4></div>
+                        <p class="paragraph thin-paragraph">We adapt the customer's corporate identity to the platform
+                            guidelines. We draw convenient and understandable interfaces.</p>
+                    </div>
+                    <div class="development-stage">
+                        <div class="stage-heading">
+                            <img src="/src/assets/icons/coding-language.svg" alt="">
+                            <h4 class="paragraph technology-heading technology-heading__bold">Development</h4></div>
+                        <p class="paragraph thin-paragraph">We create an extensible architecture, write clean and stable
+                            code. We integrate with customer technologies.</p>
+                    </div>
+                    <div class="development-stage">
+                        <div class="stage-heading">
+                            <img src="/src/assets/icons/security.svg" alt="">
+                            <h4 class="paragraph technology-heading technology-heading__bold">Testing</h4></div>
+                        <p class="paragraph thin-paragraph">We carry out functional testing and do bug fixes. We adapt
+                            the application to different phone resolutions</p>
                     </div>
 
-                    <div class="development-stage">
-                        <h4 class="paragraph technology-heading technology-heading__bold">Design</h4>
-                        <p class="paragraph thin-paragraph">We adapt the customer's corporate identity to the platform guidelines. We draw convenient and understandable interfaces.</p>
-                    </div>
 
                     <div class="development-stage">
-                        <h4 class="paragraph technology-heading technology-heading__bold">Launching</h4>
-                        <p class="paragraph thin-paragraph">We design the application page and publish it in the App Store and Google Play stores.
+                        <div class="stage-heading">
+                            <img src="/src/assets/icons/hosting%201.svg" alt="">
+                            <h4 class="paragraph technology-heading technology-heading__bold">Launching</h4></div>
+                        <p class="paragraph thin-paragraph">We design the application page and publish it in the App
+                            Store and Google Play stores.
                         </p>
                     </div>
 
+
                     <div class="development-stage">
-                        <h4 class="paragraph technology-heading technology-heading__bold">Development</h4>
-                        <p class="paragraph thin-paragraph">We create an extensible architecture, write clean and stable code. We integrate with customer technologies.</p>
-                    </div>
-                    <div class="development-stage">
-                        <h4 class="paragraph technology-heading technology-heading__bold">Support</h4>
-                        <p class="paragraph thin-paragraph">We monitor the stability of the application, update it for new devices and versions of iOS and Android.</p>
+                        <div class="stage-heading">
+                            <img src="/src/assets/icons/application.svg" alt="">
+                            <h4 class="paragraph technology-heading technology-heading__bold">Support</h4></div>
+                        <p class="paragraph thin-paragraph">We monitor the stability of the application, update it for
+                            new devices and versions of iOS and Android.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--<hr>-->
-    <!--<section class="team-section">-->
-    <!--    <div class="wrapper">-->
-    <!--<div class="team-block">-->
-    <!--    <div class="team-content"></div>-->
-    <!--    <video src="" class="team-video"></video>-->
-    <!--</div>-->
-    <!--    </div>-->
-    <!--</section>-->
-    <!--<hr>-->
-    <!--<section class="book-section">-->
-    <!--    <div class="wrapper">-->
-    <!--<div class="free-book">-->
-    <!--    <h2 class="free-book__header"></h2>-->
-    <!--    <form action="#" class="free-book__form"></form>-->
-    <!--    <img class="free-book" src="" alt="">-->
-    <!--</div>-->
-    <!--    </div>-->
-    <!--</section>-->
-    <!--<hr>-->
-    <!--<section class="faq-section">-->
-    <!--    <div class="wrapper">-->
-    <!--<div class="faq-block">-->
-    <!--    <h2 class="faq-block__heading"></h2>-->
-    <!--    <div class="faq-block__content">-->
-    <!--        <div class="faq-element"></div>-->
-    <!--        <div class="faq-element"></div>-->
-    <!--        <div class="faq-element"></div>-->
-    <!--        <div class="faq-element"></div>-->
-    <!--    </div>-->
-    <!--</div>-->
-    <!--    </div>-->
-    <!--</section>-->
+
+    <section class="team-section">
+        <div class="wrapper">
+            <div class="section-content team-content">
+                <div class="team-content__text">
+                    <h2 class="section-heading">Our team</h2>
+                    <p class="paragraph">Thousand is a full-cycle digital production company with its own product
+                        analytics, design, web and mobile development.</p>
+                    <div class="team-info">
+                        <div class="team-info__element">
+                            <p class="amount">28</p>
+                            <p class="caption">team members</p>
+                        </div>
+                        <div class="team-info__element">
+                            <p class="amount">+100</p>
+                            <p class="caption">projects</p>
+                        </div>
+                        <div class="team-info__element">
+                            <p class="amount">7 years</p>
+                            <p class="caption">in IT sphere</p>
+                        </div>
+                    </div>
+                    <p class="paragraph">All the necessary specialists - from a designer to a tester - are on our staff.
+                        We hire the best specialists in the market. It's expensive but worth it</p>
+                    <video controls width="100%" height="100%" src="" poster="assets/img/video.png"></video>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="book-section form-section">
+        <div class="wrapper">
+            <div class="section-content section-form book-section__content">
+                <h2 class="section-heading book-section__heading">Get the book for free by leaving<br>your contacts</h2>
+                <img src="./assets/img/book.png" alt="" class="book-section__picture">
+
+                <div class="form-container">
+                    <form action="#" class="book-form">
+                        <div class="form-row">
+                            <div class="form-element">
+                                <label for="book-phone-num">Phone number</label>
+                                <input type="tel" name="phone-number" id="book-phone-num"
+                                       placeholder="Your phone number">
+                            </div>
+                            <div class="form-element">
+                                <label for="book-fullname">Full name</label>
+                                <input type="text" name="full-name" id="book-fullname" placeholder="Your full name">
+                            </div>
+                        </div>
+                        <div class="form-element">
+                            <label for="book-email">email</label>
+                            <input type="text" name="email" id="book-email" placeholder="email">
+                        </div>
+                        <input type="submit" value="Send me ebook to my mail" id='book-submit' class="submit-form-btn">
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="wrapper">
+            <div class="section-content ">
+                <h2 class="section-heading">FAQ</h2>
+                <div class="faq-section__content">
+                    <div class="faq-section__column">
+                        <details class="faq-details">
+                            <summary class="faq-details__element">
+                               <p> What is the cost of a mobile application?</p>
+                            </summary>
+                            <div class="faq-details__body">
+                                <p>Development terms directly depend on the requirements for the mobile application, the
+                                    characteristics of the company, as well as the wishes of the customer.
+
+                                    Average development time from start to finished application:
+                                    Medium projects up to 3 months.
+                                    Large projects about 4-6 months.
+                                    To get a more accurate estimate of the project completion time, it is necessary to
+                                    determine the main task of the application, think over its logic and
+                                    functionality.</p></div>
+                        </details>
+                        <details class="faq-details">
+                            <summary class="faq-details__element">
+                                <p>Do you provide a guarantee for the mobile
+                                application?</p>
+                            </summary>
+                            <div class="faq-details__body">
+                                <p>Development terms directly depend on the requirements for the mobile application, the
+                                    characteristics of the company, as well as the wishes of the customer.
+
+                                    Average development time from start to finished application:
+                                    Medium projects up to 3 months.
+                                    Large projects about 4-6 months.
+                                    To get a more accurate estimate of the project completion time, it is necessary to
+                                    determine the main task of the application, think over its logic and
+                                    functionality.</p></div>
+                        </details>
+                    </div>
+                    <div class="faq-section__column">
+                        <details class="faq-details">
+                            <summary class="faq-details__element"><p>How long will development take?</p></summary>
+                            <div class="faq-details__body">
+                                <p>Development terms directly depend on the requirements for the mobile application, the
+                                    characteristics of the company, as well as the wishes of the customer.</p>
+                                <p>Average development time from start to finished application:
+                                    Medium projects up to 3 months.
+                                    Large projects about 4-6 months.
+                                    To get a more accurate estimate of the project completion time, it is necessary to
+                                    determine the main task of the application, think over its logic and
+                                    functionality.</p></div>
+                        </details>
+                        <details class="faq-details">
+                            <summary class="faq-details__element"><p>I will not tell my idea, do you guarantee&nbsp;confidentiality?</p>
+                            </summary>
+                            <div class="faq-details__body">
+                                <p>Development terms directly depend on the requirements for the mobile application, the
+                                    characteristics of the company, as well as the wishes of the customer.
+
+                                    Average development time from start to finished application:
+                                    Medium projects up to 3 months.
+                                    Large projects about 4-6 months.
+                                    To get a more accurate estimate of the project completion time, it is necessary to
+                                    determine the main task of the application, think over its logic and
+                                    functionality.</p></div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <section class="footer-section">
