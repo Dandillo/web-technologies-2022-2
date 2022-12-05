@@ -45,10 +45,12 @@ console.log('Задание 3 \n');
 
 //3 задание
 function checkWordLength(word) {
+
     return word.length >= 5
 }
 
 function reverseWord(word) {
+    if(word.length === 0) return;
     return word.split('').reverse().join('')
 }
 
@@ -70,6 +72,7 @@ console.log('Задание 4 \n');
 
 //4 задание
 function findIndexEqTarget(nums, target) {
+    if(nums.length === 0) return;
     let res = []
     for(let i = 0;i<nums.length;i++)
     {
@@ -91,9 +94,28 @@ console.log(findIndexEqTarget(nums,target));
 console.log('Задание 5 \n');
 
 function findMaxPrefix(strs) {
-    let res = '';
+    if(strs.length === 0) return;
+    for (let i = 0; i < strs[0].length ; i++){
+        let c = strs[0][i];
+        for (let j = 1; j < strs.length; j++) {
+            if (i === strs[j].length || strs[j][i] !== c ) {
+                return strs[0].substring(0, i).length  >= 2 ? strs[0].substring(0, i): '';
+            }
+        }
+    }
+    return strs[0];
+
 
 }
 
 let strs = ["цветок","поток","хлопок"];
-console.log(findMaxPrefix(strs))
+let strsReversed = []
+let resPrefix = findMaxPrefix(strs);
+if(resPrefix.length === 0) {
+    strs.forEach((element) => {
+        strsReversed.push( reverseWord(element));
+    });
+    resPrefix = reverseWord(findMaxPrefix(strsReversed)) ;
+}
+
+console.log(resPrefix);
