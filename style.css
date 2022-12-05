@@ -1,3 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+.listItem__arrow {
+  width: 1em;
+  height: 1em;
+  cursor: pointer; }
+
+.listItem__folder {
+  width: 2em; }
+
+.list-item__items {
+  padding-left: 3em; }
+
+.list-item__inner {
+  display: flex;
+  align-items: center;
+  gap: 5px; }
+
+.list-item__items, .list-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px; }
+
+.list-item > .list-item__items {
+  display: none; }
+
+.list-item_open > .list-item__inner .listItem__arrow {
+  transform: rotate(180deg); }
+
+.list-item_open > .list-item__items {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */
