@@ -11,9 +11,11 @@
 <body>
 <section class="header-section">
     <div class="wrapper">
+        <input id='burger-btn' type="checkbox">
         <header class="page__header">
             <div class="header-content">
-                <img class='burger-menu' src="./assets/icons/burger.svg" alt="">
+                <label class="burger-btn"  for="burger-btn"><span></span><span></span><span></span></label>
+
                 <h3 class="header-title">IT WEBSITE</h3>
                 <nav class="nav__menu">
                     <li class="menu__element"><a class='link menu-link' href="">Services</a></li>
@@ -22,17 +24,22 @@
                     <li class="menu__element"><a class='link menu-link' href="">FAQ</a></li>
                     <li class="menu__element"><a class='link menu-link' href="">Contacts</a></li>
                 </nav>
-                <div class="phones-container">
-                    <img class='contacts-icon' src="./assets/icons/phone.svg" alt="phone icon">
-                    <p class="contact-text"><a class="blue link" href="tel:+7 (111) 111 11 11">+7 (111) 111 11 11</a>
-                    </p>
-                    <p class="contact-text"><a class="blue link" href="tel:+7 (111) 111 11 11">+7 (111) 111 11 11</a>
-                    </p>
-                </div>
-                <div class="mail-container">
-                    <img class='contacts-icon' src="./assets/icons/mail.svg" alt="mail icon">
-                    <p class="contact-text"><a class="blue link" href="mailto:itcompany@mail.com">itcompany@mail.com</a>
-                    </p>
+                <div class="contacts-container">
+                    <div class="phones-container">
+                        <p class="contact-text">
+                            <img class='contacts-icon' src="./assets/icons/phone.svg" alt="phone icon">
+                            <a class="blue link" href="tel:+7 (111) 111 11 11">+7 (111) 111 11 11</a>
+                        </p>
+                        <p class="contact-text">
+                            <img class='contacts-icon' src="./assets/icons/phone.svg" alt="phone icon">
+                            <a class="blue link" href="tel:+7 (111) 111 11 11">+7 (111) 111 11 11</a>
+                        </p>
+                    </div>
+                    <div class="mail-container">
+                        <p class="contact-text">                        <img class='contacts-icon' src="./assets/icons/mail.svg" alt="mail icon">
+                            <a class="blue link" href="mailto:itcompany@mail.com">itcompany@mail.com</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </header>
@@ -44,7 +51,10 @@
         <div class="wrapper">
             <div class="moving-background">
                 <div class="left-column"></div>
+                <div class="left-column"></div>
                 <div class="right-column"></div>
+                <div class="right-column"></div>
+
             </div>
             <div class="intro-content">
                 <div class="intro-content__text">

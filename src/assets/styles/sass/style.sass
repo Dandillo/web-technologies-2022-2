@@ -43,6 +43,7 @@ body
   width: 100%
   max-width: 1124px
   z-index: 999
+
 .header-content
   display: flex
   padding: 19px 24px
@@ -53,7 +54,16 @@ body
   font-weight: 700
   color: $blue
   //padding-right: 80px
-
+.contacts-container
+  display: flex
+  column-gap: 20px
+  img
+    padding-right: 12px
+  .contact-text:nth-child(2) img
+    display: none
+  .contact-text
+    display: flex
+    align-items: center
 .nav__menu
   list-style-type: none
   display: flex
@@ -80,10 +90,10 @@ body
   content: ''
   position: absolute
   width: 900px
-  height: 1400px
+  height: 1000px
   z-index: -1
   display: flex
-  left: 55%
+  left: 45%
   top: -79px
 
   /*background-image: url("/src/assets/img/intro background.png") ;
@@ -101,15 +111,39 @@ body
   background-repeat: repeat-y
   z-index: -1
   animation: moveBack 17s infinite linear
-  position: relative
+  position: absolute
   background-size: 100%
   overflow: hidden
+.left-column:nth-child(2)
+  animation: moveBack2 17s infinite linear
 @keyframes move
   0%
     transform: translateY(-2000px)
 
   100%
     transform: translateY(0px)
+
+@keyframes move2
+  0%
+    transform: translateY(0px)
+
+  100%
+    transform: translateY(2000px)
+
+@keyframes moveBack
+  0%
+    transform: translateY(0px)
+
+  100%
+    transform: translateY(-2000px)
+
+@keyframes moveBack2
+  0%
+    transform: translateY(2000px)
+
+  100%
+    transform: translateY(0px)
+
 
 .right-column
   content: ''
@@ -120,20 +154,22 @@ body
   background-size: 350px
   z-index: -1
   animation: move 17s infinite linear
-  position: relative
   background-repeat: repeat-y
   overflow: hidden
   opacity: .99
+  position: absolute
+.right-column:nth-child(2)
+  animation: move2 17s infinite linear
 
-@keyframes moveBack
-  0%
-    transform: translateY(0px)
 
-  100%
-    transform: translateY(-1000px)
 
-.burger-menu
+
+#burger-btn
   display: none
+.burger-btn
+  display: none
+
+
 
 .main-content
   flex: 1 0 auto
@@ -702,18 +738,66 @@ body
   .footer-section .wrapper
     margin-bottom: 0
   .page__header
-    top: 20px
+    top: 10px
     right: 0
     left: 0
     justify-content: space-between
     margin-left: 0
     width: 100%
+    display: flex
+  .header-content
+    width: 100%
+    justify-content: space-between
 
-  .burger-menu
-    display: block
+
+
+  #burger-btn:checked ~.page__header
+    .header-content
+      height: 100vh
+      padding-top: 145px
+      flex-direction: column
+      justify-content: space-between
+      padding-bottom: 140px
+      .header-title
+        font-size: 48px
+      .nav__menu
+        flex-direction: column
+        row-gap: 32px
+        li
+          font-size: 36px
+      .nav__menu, .phones-container
+          display: flex
+    .burger-btn
+      position: absolute
+      right: 151px
+      top: 50px
+      background: url("../../icons/cross.svg") no-repeat
+      span
+        visibility: hidden
+  .contacts-container
+    .contact-text:nth-child(2) img
+      display: inline
+
+  #burger-btn:checked ~.page__header
+    top: 0
+  #burger-btn
+    display: none
+  .burger-btn
+    display: flex
+    flex-direction: column
+    row-gap: 8px
+    position: relative
+    width: 60px
+    animation: ease-in-out 5ms
+    span
+      display: block
+      width: 60px
+      height: 8px
+      background-color: $blue
 
   .header-title
-    padding-left: 5em
+    width: 100%
+    text-align: center
     white-space: nowrap
     padding-right: 0
     justify-self: center
@@ -729,8 +813,8 @@ body
     padding: 0 32px
 
   .moving-background
-    width: 580px
-    left: 60%
+    width: 600px
+    left: 52%
   .right-column
     width: 275px
     background-size: 167px
@@ -884,6 +968,38 @@ body
     width: 368px
     background-size: 290px
     animation: none
+  .burger-btn
+    row-gap: 4px
+    span
+      width: 40px
+      height: 4px
+  #burger-btn:checked ~.page__header
+    .header-content
+      .header-title
+        font-size: 20px
+      .nav__menu
+        flex-direction: column
+        row-gap: 21px
+        li
+          font-size: 24px
+      .nav__menu, .phones-container
+        display: flex
+      .contacts-container
+        row-gap: 22px
+        flex-direction: column
+        .mail-container
+          display: flex
+        .phones-container
+          flex-direction: column
+          row-gap: 22px
+
+    .burger-btn
+      position: absolute
+      right: 0
+      top: 80px
+      background: url("../../icons/cross.svg") no-repeat
+      span
+        visibility: hidden
   .intro-paragraph
     padding: 0
   .intro-content
