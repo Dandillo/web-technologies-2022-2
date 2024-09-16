@@ -1,0 +1,177 @@
+@import "./global.css";
+@import "./fonts.css";
+@import "./utils.css";
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+.page-paragraph {
+    font-size: 16px;
+    line-height: 26px;
+    color: #1F3F68;
+}
+.page-heading {
+    font-size: 64px;
+    color: #1F3F68;
+}
+main {
+    padding: 30px;
+    flex: 1 0 auto;
+}
+
+header {
+    background-color: #568d56;
+    width: 100%;
+}
+
+main {
+    background-color: #f5e4c6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-info {
+    padding: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 40px;
+}
+
+.menu-elements {
+    list-style-type: none;
+    display: flex;
+    column-gap: 20px;
+    padding: 15px;
+}
+.menu-element {
+    border-right: 5px solid white;
+    border-radius: 25px;
+    -webkit-box-shadow: 5px 0px 0px 0px rgba(34, 60, 80, 0.4);
+    -moz-box-shadow: 5px 0px 0px 0px rgba(34, 60, 80, 0.4);
+    box-shadow: 5px 0px 0px 0px rgba(34, 60, 80, 0.4);
+    display: block;
+    padding-right: 10px;
+    transition: ease-in-out .2s;
+}
+
+.link {
+    font-size: 2em;
+    color: white;
+}
+
+.list-link, .link {
+    text-decoration: none;
+}
+
+.list-link {
+    color: orangered;
+}
+
+.list-link:hover {
+    transition: ease-in-out .3s;
+    color: orange
+}
+
+.link:hover {
+    transition: ease-in-out .3s;
+    color: #8cb7a4;
+}
+
+.menu-element:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 5px 0px 0px 0px rgba(140, 183, 164, 0.2);
+    -moz-box-shadow: 5px 0px 0px 0px rgba(140, 183, 164, 0.2);
+    box-shadow: 5px 0px 0px 0px rgba(140, 183, 164, 0.2);
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.contacts-nested {
+    list-style-type: none;
+
+}
+
+.contacts-picture {
+    padding: 30px 0;
+    width: 350px;
+}
+
+.contacts-title {
+    font-weight: 500;
+    font-size: 44px;
+    text-align: center;
+}
+.page-subtitle {
+    font-size: 36px;
+    text-align: center;
+}
+.page-annotation {
+    font-size: 20px;
+    line-height: 30px;
+    color: #1F3F68;
+}
+.descr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    gap: 50px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-form {
+    width: 250px;
+    display: grid;
+    background: rgba(255, 255, 255, 0.6) url("/src/assets/img/background-form.jpg") center;
+    background-clip: border-box;
+    border-radius: 10px;
+    background-blend-mode:lighten;
+}
+
+textarea {
+    resize: none;
+}
+.form-element {
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    opacity: 0.4;
+}
+.submit-btn {
+    margin-top: 10px;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(75,116,230,1) 0%, rgba(95,106,231,1) 40%, rgba(115,96,231,1) 58%, rgba(138,86,233,1) 72%);
+    opacity:1;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+.submit-btn:hover {
+    background-color: red;
+}
+footer {
+    color: white;
+    padding: 30px;
+    background-color: #63a472;
+}
