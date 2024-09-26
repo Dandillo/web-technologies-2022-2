@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+main {
+    padding: 30px;
+    flex: 1 0 auto;
+}
+
+header {
+    height: 100px;
+    background-color: black;
+    width: 100%;
+}
+
+main {
+    background-color: #f5e4c6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-info {
+    padding: 30px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 40px;
+}
+
+.menu-elements {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding: 30px;
+}
+
+.link {
+    font-size: 2em;
+    color: white;
+}
+
+.list-link, .link {
+    text-decoration: none;
+}
+
+.list-link {
+    color: orangered;
+}
+
+.list-link:hover {
+    transition: ease-in-out .3s;
+    color: orange
+}
+
+.link:hover {
+    transition: ease-in-out .3s;
+    color: #8cb7a4;
+}
+
+.menu-element:hover {
+    cursor: pointer;
+
+}
+
+.contacts-nested {
+    list-style-type: none;
+
+}
+
+.contacts-picture {
+    padding: 30px 0;
+    width: 350px;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.descr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    gap: 50px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-form {
+    width: 250px;
+    display: grid;
+}
+
+textarea {
+    resize: none;
+}
+
+.submit-btn {
+    margin-top: 10px;
+}
+
+footer {
+    color: white;
+    padding: 30px;
+    background-color: black;
+}
